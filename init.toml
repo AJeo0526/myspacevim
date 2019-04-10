@@ -1,0 +1,82 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+#    enable_statusline_mode = true 
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "arrow"
+    buffer_index_type = 4
+#    enable_tabline_filetype_icon = true
+    bootstrap_after = "myspacevim#after"
+    vimcompatible = true
+#    search_highlight_persist = false
+#    guifont = "Hack Regular:h16"
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto-completion-return-key-behavior = "complete"
+#auto-completion-tab-key-behavior = "smart"
+auto-completion-tab-key-behavior = "smart"
+#auto-completion-complete-with-key-sequence = "jk"
+#enable = false
+
+[[layers]]
+name = 'format'
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+name = 'chinese'
+
+[[layers]]
+name = 'checkers'
+enable_neomake = true
+lint_on_the_fly = true
+show_cursor_error = false
+
+#[[custom_plugins]]
+#name = 'Valloric/YouCompleteMe'
+#merged = 0
+
+[[layers]]
+name = 'debug'
+
+[[layers]]
+name = 'ui'
+
+[[layers]]
+name = 'tmux'
+
+
+[[custom_plugins]]
+name = 'rhysd/vim-clang-format'
+merged = 0
+
+[[custom_plugins]]
+name = 'Chiel92/vim-autoformat'
+merged = 0
+
+[[custom_plugins]]
+name = 'ryanoasis/vim-devicons'
+merged = false
+
